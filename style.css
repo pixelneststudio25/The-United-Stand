@@ -140,6 +140,66 @@ body {
   max-width: 900px;
 }
 
+/* Circular Hero Logo */
+.hero-logo {
+  margin-bottom: 2rem;
+}
+
+.hero-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-logo img:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Adjust hero content spacing */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.hero-logo.reveal.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero-logo img {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 /* Keep all your existing CSS after the hero section */
 .hero h1 {
   margin: 0 0 .5rem 0;
