@@ -11,6 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elems.forEach(el => observer.observe(el));
 
+    // HAMBURGER MENU FUNCTIONALITY - ADD THIS
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+        // Toggle menu open/close on hamburger click
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('show');
+        });
+
+        // Close menu when a nav link is clicked
+        document.querySelectorAll("#nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+                hamburger.classList.remove("active");
+            });
+        });
+    }
+
     // optional: small handlers for demo buttons (replace with real links)
     document.getElementById('discordBtn')?.addEventListener('click', (e) => {
       e.preventDefault();
