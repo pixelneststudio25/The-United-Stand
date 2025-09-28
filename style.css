@@ -154,6 +154,14 @@ body {
 /* Circular Hero Logo */
 .hero-logo {
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.hero-logo.reveal.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
 
 .hero-logo img {
@@ -161,25 +169,19 @@ body {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  /* Removed border from default state */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  /* Add a subtle glow effect */
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   filter: brightness(1.05);
 }
 
 .hero-logo img:hover {
-  transform: scale(1.15) rotate(5deg); /* Increased scale and added rotation */
-  border: 4px solid rgba(255, 255, 255, 0.8); /* Border only appears on hover */
+  transform: scale(1.30) rotate(360deg);
+  border: 4px solid #FFD700; /* Gold border */
   box-shadow: 
-    0 0 0 8px rgba(255, 255, 255, 0.1), /* Outer glow */
-    0 20px 60px rgba(0, 0, 0, 0.6), /* Deeper shadow */
-    0 0 40px rgba(216, 25, 32, 0.4); /* Red glow effect */
-  filter: brightness(1.2) saturate(1.1); /* Enhanced brightness and saturation */
-}
-
-/* Optional: Add pulse animation on hover for extra emphasis */
-.hero-logo img:hover {
+    0 0 0 8px rgba(255, 255, 255, 0.1),
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(255, 215, 0, 0.4); /* Gold glow effect */
+  filter: brightness(1.2) saturate(1.1);
   animation: logoPulse 2s ease-in-out infinite;
 }
 
@@ -188,13 +190,13 @@ body {
     box-shadow: 
       0 0 0 8px rgba(255, 255, 255, 0.1),
       0 20px 60px rgba(0, 0, 0, 0.6),
-      0 0 40px rgba(216, 25, 32, 0.4);
+      0 0 40px rgba(255, 215, 0, 0.4); /* Gold */
   }
   50% {
     box-shadow: 
       0 0 0 12px rgba(255, 255, 255, 0.15),
       0 25px 70px rgba(0, 0, 0, 0.7),
-      0 0 50px rgba(216, 25, 32, 0.6);
+      0 0 50px rgba(255, 215, 0, 0.6); /* Brighter gold */
   }
 }
 
@@ -207,7 +209,7 @@ body {
 
 .hero-logo.reveal.visible {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: scale(1.15) translateY(0);
 }
 
 @media (max-width: 768px) {
