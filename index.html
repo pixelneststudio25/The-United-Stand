@@ -15,20 +15,24 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="nav-logo"><img src="UnitedPeoples_Logo.jpg" alt="United Peoples TV Logo">  United Peoples TV</a>
-      <!-- Hamburger -->
+        <a href="#" class="nav-logo">
+          <!-- Using text logo since image is missing -->
+          <span class="logo-text">United Peoples TV</span>
+        </a>
+        
+        <!-- Hamburger -->
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-      <!-- Nav Links -->
+        <!-- Nav Links -->
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#videos">Videos</a></li>
             <li><a href="#shop">Shop</a></li>
-            <li><a href="#Fan-Zone">Fan-Zone</a></li>
+            <li><a href="#Fan-Zone">Fan Zone</a></li>
             <li><a href="#Subscribe">Subscribe</a></li>
         </ul>
       </div>
@@ -36,10 +40,8 @@
 
   <!-- Hero with video background -->
   <header class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="To-the-place-WE-belong-This-time-tomorro.mp4_2.mp4" type="video/mp4">
-      <!-- Fallback poster image -->
-    </video>
+    <!-- Fallback background image since video is missing -->
+    <div class="hero-background"></div>
 
     <div class="hero-overlay"></div>
 
@@ -51,7 +53,7 @@
 
       <div class="hero-ctas reveal delay-2">
         <a class="btn btn-primary" href="https://www.youtube.com/@unitedpeoplestv" target="_blank" rel="noopener">Watch on YouTube</a>
-        <a class="btn btn-outline" href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqazZKWXdjamJvUWlRMnoxZDFXQkp3cFpGSlpzQXxBQ3Jtc0tuUVRiUUZ0VVNyMjJja2VVWmxJdURqR2R6WGhCejBvRnBDeE1FTnRZcnp5TlpRbVh2M1B0T1BXUjdPVUREa3Flc0RCQmkzZGI2YThhQ1JXaHJJM2dtWGZlZEoxVlEydHNDOTEtMWJNTEdqS19ycjNQTQ&q=https%3A%2F%2Fdiscord.gg%2Fmanunited">💬 Join the Discord</a>
+        <a class="btn btn-outline" href="https://discord.gg/manunited" id="discordBtn">💬 Join the Discord</a>
       </div>
     </div>
   </header>
@@ -63,43 +65,43 @@
         <h2 class="section-title reveal">Latest From UPTV</h2>
 
         <div class="video-grid reveal delay-1">
-            <div class="video-card">
-                <div class="media">
-                    <iframe width="100%" height="315" 
-                      src="https://www.youtube.com/embed/X97TD3aMFzM?si=7_CwO2kcpmRDFgP7"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen>
-                    </iframe>
-                  </div>                  
-            </div>
-            <div class="video-card">
-                <div class="media">
-                    <iframe width="100%" height="315" 
-                      src="https://www.youtube.com/embed/tEl19hueLN8?si=V-dyoyn-MFc-cqa6"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen>
-                    </iframe>
-                  </div>                  
-            </div>
-            <div class="video-card">
-                <div class="media">
-                    <iframe width="100%" height="315" 
-                      src="https://www.youtube.com/embed/2M_s8_YT4hc?si=XItqfJPwqnHKW2wC"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen>
-                    </iframe>
-                  </div>                  
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/X97TD3aMFzM?si=7_CwO2kcpmRDFgP7"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/tEl19hueLN8?si=V-dyoyn-MFc-cqa6"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/2M_s8_YT4hc?si=XItqfJPwqnHKW2wC"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -132,12 +134,12 @@
 
         <div class="fanzone-grid reveal delay-2">
           <div class="poll card">
-            <h3>Who’s your MOTM vs Burnley?</h3>
+            <h3>Who's your MOTM vs Burnley?</h3>
             <ul class="poll-list">
               <li>Mbeumo <span class="muted">✅</span></li>
               <li>Bruno <span class="muted">✅</span></li>
               <li>Amad <span class="muted">✅</span></li>
-              <li>De-Ligt <span class="muted">✅</span></li>
+              <li>De Ligt <span class="muted">✅</span></li>
             </ul>
             <a class="btn btn-primary" href="#" id="voteBtn">Vote Now</a>
           </div>
@@ -145,7 +147,7 @@
           <div class="discord card">
             <h3>Join the Conversation</h3>
             <p class="muted">50,000+ Reds arguing, celebrating and analyzing every match.</p>
-            <a class="btn btn-outline" href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqazZKWXdjamJvUWlRMnoxZDFXQkp3cFpGSlpzQXxBQ3Jtc0tuUVRiUUZ0VVNyMjJja2VVWmxJdURqR2R6WGhCejBvRnBDeE1FTnRZcnp5TlpRbVh2M1B0T1BXUjdPVUREa3Flc0RCQmkzZGI2YThhQ1JXaHJJM2dtWGZlZEoxVlEydHNDOTEtMWJNTEdqS19ycjNQTQ&q=https%3A%2F%2Fdiscord.gg%2Fmanunited" id="discordBtn2">Join Discord</a>
+            <a class="btn btn-outline" href="https://discord.gg/manunited" id="discordBtn2">Join Discord</a>
           </div>
         </div>
       </div>
@@ -153,41 +155,37 @@
 
     <!-- Shop/Newsletter -->
     <section class="section" id="shop">
-        <div class="container">
-            <h2 class="section-title reveal">Official UPTV Store</h2>
-            <div class="shop-grid reveal delay-1">
-
-              <!-- Product 1 -->
-              <div class="shop-item card">
-                <img src="https://www.uptvmerch.com/cdn/shop/files/20c3ebc48f01e5f07c75b0c0c90d3da5.png?v=1715968487&width=823" alt="UPTV T-Shirt" class="shop-img">
-                <h3>NOTORIOUS B.I.E </h3>
-                <p class="muted">ADULT HOODIE | BLACK</p>
-                <a href="https://www.uptvmerch.com/products/notorious-b-i-e-adult-hoodie-black?variant=47246748156137&country=GB&currency=GBP&utm_campaign=sag_organic&srsltid=AfmBOopKl3DksRujWhiR7yz0tXJC6kvpHygr7upK3DRoXNyRNxeTNIdbdB8&utm_content=YT3-Ly8h3O0akJS0BMuSgdovGMSHwreqY4LFt6wv4SqB3SwxiFZOu2HSkth8hurONjCYMCZU7J-NT7ZTAlgaQpvY0qI&utm_term=UCEfEaGKGSxy8ZYIV1RWLbCQ&utm_medium=product_shelf&utm_source=youtube" target="_blank" class="btn btn-shop">Buy Now</a>
-              </div>
-
-              <!-- Product 2 -->
-              <div class="shop-item card">
-                <img src="https://www.uptvmerch.com/cdn/shop/files/cab2059539d94afad841081789e4ce11.png?v=1719416882&width=823" alt="UPTV Mug" class="shop-img">
-                <h3>KOBBIE FA CUP</h3>
-                <p class="muted">ADULT TEE | WHITE</p>
-                <a href="https://www.uptvmerch.com/products/kobbie-fa-cup-mens-tee-white?variant=47458147238121&country=GB&currency=GBP&utm_campaign=sag_organic&srsltid=AfmBOopNa_CyABhvJKQDLCMZrXPIxu2uMt1H7O6E-xu2zzieK3GrFKhpuOA&utm_content=YT3-qjZuao96ryLOLNIvEzp91O6hM3moTdtWAanK-Wi5XFHTje4la_imJYvs8DkKm1NmVsyPxPTsHGy9y94XUATtMxs&utm_term=UCEfEaGKGSxy8ZYIV1RWLbCQ&utm_medium=product_shelf&utm_source=youtube" target="_blank" class="btn btn-shop">Buy Now</a>
-              </div>
-
-              <!-- Product 3 -->
-              <div class="shop-item card">
-                <img src="https://www.uptvmerch.com/cdn/shop/files/9e27780d6b3796f39a89ab5cd58f480e.png?v=1715967235&width=823" alt="UPTV Hoodie" class="shop-img">
-                <h3>AMADNESS</h3>
-                <p class="muted">ADULT TEE | WHITE</p>
-                <a href="https://www.uptvmerch.com/products/amadness-adult-tee?variant=47246713651433&country=GB&currency=GBP&utm_campaign=sag_organic&srsltid=AfmBOoq47wvj7l61JdMC4jEliUvo2ZIdqCPN0fvIbTHbjRHSkpmOFf1tAbg&utm_content=YT3-rgfx1f3huT8pQnbH0tjmw43xsRb3rqAtYBciFJEjy-W3xVbvEcWjB15zVLQXJCZ3dtp-jcaAidOGCvxwME4r0lM&utm_term=UCEfEaGKGSxy8ZYIV1RWLbCQ&utm_medium=product_shelf&utm_source=youtube" target="_blank" class="btn btn-shop">Buy Now</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="shop-footer reveal delay-2">
-            <a href="https://www.uptvmerch.com/collections/" target="_blank" class="btn btn-shop">View Full Shop</a>
+      <div class="container">
+        <h2 class="section-title reveal">Official UPTV Store</h2>
+        <div class="shop-grid reveal delay-1">
+          <!-- Product 1 -->
+          <div class="shop-item card">
+            <img src="https://www.uptvmerch.com/cdn/shop/files/20c3ebc48f01e5f07c75b0c0c90d3da5.png?v=1715968487&width=823" alt="UPTV T-Shirt" class="shop-img">
+            <h3>NOTORIOUS B.I.E</h3>
+            <p class="muted">ADULT HOODIE | BLACK</p>
+            <a href="https://www.uptvmerch.com/products/notorious-b-i-e-adult-hoodie-black" target="_blank" class="btn btn-shop">Buy Now</a>
           </div>
 
+          <!-- Product 2 -->
+          <div class="shop-item card">
+            <img src="https://www.uptvmerch.com/cdn/shop/files/cab2059539d94afad841081789e4ce11.png?v=1719416882&width=823" alt="UPTV Mug" class="shop-img">
+            <h3>KOBBIE FA CUP</h3>
+            <p class="muted">ADULT TEE | WHITE</p>
+            <a href="https://www.uptvmerch.com/products/kobbie-fa-cup-mens-tee-white" target="_blank" class="btn btn-shop">Buy Now</a>
+          </div>
 
+          <!-- Product 3 -->
+          <div class="shop-item card">
+            <img src="https://www.uptvmerch.com/cdn/shop/files/9e27780d6b3796f39a89ab5cd58f480e.png?v=1715967235&width=823" alt="UPTV Hoodie" class="shop-img">
+            <h3>AMADNESS</h3>
+            <p class="muted">ADULT TEE | WHITE</p>
+            <a href="https://www.uptvmerch.com/products/amadness-adult-tee" target="_blank" class="btn btn-shop">Buy Now</a>
+          </div>
+        </div>
+        
+        <div class="shop-footer reveal delay-2">
+          <a href="https://www.uptvmerch.com/collections/" target="_blank" class="btn btn-primary">View Full Shop</a>
+        </div>
 
         <div class="newsletter reveal delay-2" id="Subscribe">
           <h2>Stay in the Loop</h2>
@@ -199,36 +197,17 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>📺 YouTube • 📸 Instagram • 💬 Discord • 🎬 TikTok</p>
-      <p class="muted">© 2025 UnitedPeoples TV </p>
+      <p class="muted">© 2025 UnitedPeoples TV</p>
     </div>
   </footer>
 
   <!-- Script (animations & small interactions) -->
   <script src="script.js"></script>
-  <script>
-    const hamburger =    document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-  // Toggle menu open/close on hamburger click
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('show');
-    });
-
-  // Close menu automatically when a nav link is clicked
-    document.querySelectorAll("#nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
-        hamburger.classList.remove("active");
-      });
-    });
-  </script> 
 </body>
 </html>
