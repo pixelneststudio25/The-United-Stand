@@ -139,27 +139,6 @@ body {
   max-width: 900px;
 }
 
-/* Circular Hero Logo */
-.hero-logo {
-  margin-bottom: 2rem;
-}
-
-.hero-logo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.hero-logo img:hover {
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-}
-
 /* Adjust hero content spacing */
 .hero-content {
   position: relative;
@@ -170,6 +149,53 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Circular Hero Logo */
+.hero-logo {
+  margin-bottom: 2rem;
+}
+
+.hero-logo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Removed border from default state */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Add a subtle glow effect */
+  filter: brightness(1.05);
+}
+
+.hero-logo img:hover {
+  transform: scale(1.15) rotate(5deg); /* Increased scale and added rotation */
+  border: 4px solid rgba(255, 255, 255, 0.8); /* Border only appears on hover */
+  box-shadow: 
+    0 0 0 8px rgba(255, 255, 255, 0.1), /* Outer glow */
+    0 20px 60px rgba(0, 0, 0, 0.6), /* Deeper shadow */
+    0 0 40px rgba(216, 25, 32, 0.4); /* Red glow effect */
+  filter: brightness(1.2) saturate(1.1); /* Enhanced brightness and saturation */
+}
+
+/* Optional: Add pulse animation on hover for extra emphasis */
+.hero-logo img:hover {
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 8px rgba(255, 255, 255, 0.1),
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(216, 25, 32, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 12px rgba(255, 255, 255, 0.15),
+      0 25px 70px rgba(0, 0, 0, 0.7),
+      0 0 50px rgba(216, 25, 32, 0.6);
+  }
 }
 
 .hero-logo {
@@ -186,16 +212,16 @@ body {
 
 @media (max-width: 768px) {
   .hero-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-width: 3px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-logo img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 }
 
