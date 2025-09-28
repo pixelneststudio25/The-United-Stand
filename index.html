@@ -39,24 +39,27 @@
     </nav>
 
   <!-- Hero with video background -->
-  <header class="hero">
-    <!-- Fallback background image since video is missing -->
+<header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="fallback-poster.jpg">
+    <source src="To-the-place-WE-belong-This-time-tomorro.mp4_2.mp4" type="video/mp4">
+    <!-- Fallback for browsers that don't support video -->
     <div class="hero-background"></div>
+  </video>
 
-    <div class="hero-overlay"></div>
+  <div class="hero-overlay"></div>
 
-    <div class="hero-content container" id="home">
-      <h1 class="reveal">The Voice of Manchester United Fans Worldwide</h1>
-      <p class="lead reveal delay-1">
-        Latest news, match insights and the best fan debates — all in one place.
-      </p>
+  <div class="hero-content container" id="home">
+    <h1 class="reveal">The Voice of Manchester United Fans Worldwide</h1>
+    <p class="lead reveal delay-1">
+      Latest news, match insights and the best fan debates — all in one place.
+    </p>
 
-      <div class="hero-ctas reveal delay-2">
-        <a class="btn btn-primary" href="https://www.youtube.com/@unitedpeoplestv" target="_blank" rel="noopener">Watch on YouTube</a>
-        <a class="btn btn-outline" href="https://discord.gg/manunited" id="discordBtn">💬 Join the Discord</a>
-      </div>
+    <div class="hero-ctas reveal delay-2">
+      <a class="btn btn-primary" href="https://www.youtube.com/@unitedpeoplestv" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn btn-outline" href="https://discord.gg/manunited" id="discordBtn">💬 Join the Discord</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Latest content hub -->
   <main>
