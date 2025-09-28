@@ -52,6 +52,13 @@ body {
   text-decoration: none;
 }
 
+.nav-logo img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+  margin-right: 10px; /* Space between image and text */
+  vertical-align: middle;
+}
+
 .logo-text {
   background: linear-gradient(45deg, #ffffff, #ffeaa7);
   -webkit-background-clip: text;
