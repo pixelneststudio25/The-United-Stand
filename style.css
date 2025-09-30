@@ -8,6 +8,11 @@
   --glass: rgba(255,255,255,0.08);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Reset & base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
