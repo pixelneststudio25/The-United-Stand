@@ -11,25 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elems.forEach(el => observer.observe(el));
 
-    // HAMBURGER MENU FUNCTIONALITY - ADD THIS
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    // HAMBURGER MENU FUNCTIONALITY 
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links'); // Keep your current variable name
 
-    if (hamburger && navLinks) {
-        // Toggle menu open/close on hamburger click
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('show');
-        });
+if (hamburger && navLinks) {
+    // Toggle menu + X animation
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // hamburger → X
+        navLinks.classList.toggle('active');   // Change from 'show' to 'active'
+    });
 
-        // Close menu when a nav link is clicked
-        document.querySelectorAll("#nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("show");
-                hamburger.classList.remove("active");
-            });
+    // Auto-close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active'); // Change from 'show' to 'active'
         });
-    }
+    });
+}
 
     // optional: small handlers for demo buttons (replace with real links)
     document.getElementById('discordBtn')?.addEventListener('click', (e) => {
