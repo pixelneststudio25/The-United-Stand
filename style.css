@@ -87,6 +87,10 @@ body {
   background: rgba(253, 208, 23, 0.1); /* Subtle gold background */
 }
 
+.nav-links li {
+  list-style: none;
+}
+
 /* Keep desktop layout for larger screens */
 @media (min-width: 769px) {
   .nav-links {
