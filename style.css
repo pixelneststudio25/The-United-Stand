@@ -72,21 +72,32 @@ body {
   background-clip: text;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
 
 .nav-links a {
-  color: var(--white);
+  color: #fdd017; /* Gold color */
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .nav-links a:hover {
-  color: var(--accent-dark);
+  color: #ffed4e; /* Brighter gold */
+  background: rgba(253, 208, 23, 0.1); /* Subtle gold background */
+}
+
+/* Keep desktop layout for larger screens */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.2rem;
+  }
+  
+  .nav-links a {
+    font-size: 1.5rem; 
+  }
 }
 
 .hamburger {
@@ -130,21 +141,41 @@ body {
     top: 70px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px); /* Full height minus navbar */
+    height: calc(100vh - 70px);
     background: var(--card);
     flex-direction: column;
-    justify-content: flex-start; /* Align items from top */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     padding: 2rem;
-    gap: 1.5rem;
+    gap: 2rem; /* Increased gap for better spacing */
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s ease;
-    z-index: 1001; /* Added: Ensure menu is above other content */
+    z-index: 1001;
+    text-align: center; /* Center text */
   }
 
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  /* Gold font color and increased font size for mobile */
+  .nav-links a {
+    color: #fdd017; /* Gold color */
+    font-size: 1.3rem; /* Increased font size */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+
+  /* Hover effect - brighter gold */
+  .nav-links a:hover {
+    color: #ffed4e; /* Brighter gold */
+    background: rgba(253, 208, 23, 0.1); /* Subtle gold background on hover */
+    transform: scale(1.05); /* Slight scale effect */
   }
 }
 
