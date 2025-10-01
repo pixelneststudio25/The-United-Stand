@@ -93,6 +93,9 @@ body {
     display: flex;
     list-style: none;
     gap: 2.2rem;
+    list-style: none; /* This removes the bullet points */
+    padding-left: 0; /* Removes default left padding */
+    margin: 0; /* Removes default margin */
   }
   
   .nav-links a {
@@ -147,12 +150,16 @@ body {
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     padding: 2rem;
-    gap: 2rem; /* Increased gap for better spacing */
+    gap: 3rem; /* Increased gap for better spacing */
+    list-style: none; /* This removes the bullet points */
+    padding-left: 0; /* Removes default left padding */
+    margin: 0; /* Removes default margin */
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 1001;
     text-align: center; /* Center text */
+
   }
 
   .nav-links.active {
